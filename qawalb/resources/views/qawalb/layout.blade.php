@@ -96,7 +96,7 @@
                                                 </div>
                                             </div>
                                             <ul>
-                                                <li><a href="#">Profile Page</a></li>
+                                            <li><a href="/profile">Profile Page</a></li>
                                                 <li><a href="/create">Upload Templet</a></li>
                                                 <li>
 

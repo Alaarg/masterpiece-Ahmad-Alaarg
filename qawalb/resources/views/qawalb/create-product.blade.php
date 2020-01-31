@@ -29,7 +29,7 @@
     <div class="product-upload-page-area bg-secondary section-space-bottom">
         <div class="container">
             <h3 class="title-section">Upload Your item</h3>
-            <form id="personal-info-form" method="post" action="/shop" enctype="multipart/form-data">
+            <form id="personal-info-form" method="post" action="/" enctype="multipart/form-data">
                 @method('POST')
                 @csrf
                 <div class="product-upload-wrapper inner-page-padding">
@@ -69,7 +69,9 @@
                             <h4>Upload Templet File<span>*</span></h4>
                         </div>
                         <div class="upload-info-field">
-                            <div class="file-upload-area"><a href="#">Choose File</a>No File Choosen</div>
+                            <div class="file-upload-area">
+                                <input type="file" name="templet_file"  accept=".zip , .rar">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group upload-info-item">
@@ -77,7 +79,9 @@
                             <h4>Upload Screenshots<span>*</span></h4>
                         </div>
                         <div class="upload-info-field">
-                            <div class="file-upload-area"><a href="#">Choose File</a>No File Choosen</div>
+                            <div class="file-upload-area">
+                                <input type="file" name="templet_img"  accept="image/png, image/jpeg">
+                               </div>
                         </div>
                     </div>
                     <div class="form-group upload-info-item">

@@ -13,26 +13,28 @@
 // Route::get('/home', function () {
 //     return view('qawalb.index');
 // });
-Route::get('/', function () {
-    return view('qawalb.index');
-});
+// Route::get('/', function () {
+//     return view('qawalb.index');
+// });
+Route::get('/','TempletController@index');
+Route::get('/create','TempletController@createTemplet');
+Route::post('/','TempletController@store');
+Route::get('/{templet}','TempletController@show');
+
+Route::get('/ahmad','AutherController@profile');
 
 
 //-----templets------
-//Route::resource('shop','TempletController');
-
-Route::get('/create','TempletController@show');
-Route::get('/shop','TempletController@index');
-Route::post('/shop','TempletController@store');
+// Route::get('/create','TempletController@createTemplet');
+//Route::post('/shop','TempletController@store');
+// Route::get('/{templet}','TempletController@show');
 
 
 //-----templets------
 
-
-
-Route::get('/details', function () {
-    return view('qawalb.product-details');
-});
+// Route::get('/details', function () {
+//     return view('qawalb.product-details');
+// });
 
 
 Auth::routes();

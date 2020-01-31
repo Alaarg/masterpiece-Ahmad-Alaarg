@@ -6,7 +6,7 @@
     <div class="inner-banner-area">
         <div class="container">
             <div class="inner-banner-wrapper">
-                <h1>Prodact Name</h1>
+                <h1>{{$templet->templet_name}}</h1>
                 <p>Premium WordPress Themes, Web Templates and Many More ...</p>
 
             </div>
@@ -18,8 +18,8 @@
         <div class="container">
             <div class="pagination-wrapper">
                 <ul>
-                    <li><a href="index.html">Home</a><span> -</span></li>
-                    <li>Prodact Name</li>
+                    <li><a href="/">Home</a><span> -</span></li>
+                    <li>{{$templet->templet_name}}</li>
                 </ul>
             </div>
         </div>
@@ -32,14 +32,12 @@
                 <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                     <div class="inner-page-main-body">
                         <div class="single-banner">
-                            <img src="img/product/details.jpg" alt="product" class="img-responsive">
+                            <img src="{{Storage::url($templet->templet_img)}}" alt="product" class="img-responsive">
                         </div>
-                        <h2 class="title-inner-default">GTBuilder - Construction & Building WordPress Theme</h2>
-                        <p class="para-inner-default">Bmply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                            noning essentially unchanged. </p>
+                        <p class="para-inner-default">
+                            {{$templet->description}}
 
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -61,7 +59,7 @@
 
                                     <li><a href="#" class="add-to-favourites-btn" id="favourites-button"><i
                                                 class="fa fa-eye" aria-hidden="true"></i>Live View</a></li>
-                                    <li><a href="#" class="buy-now-btn" id="buy-button">
+                                    <li><a href="{{$templet->templet_file}}" class="buy-now-btn" id="buy-button" download="download">
                                             <i class="fa fa-download"></i>
                                             Download
                                         </a></li>
@@ -72,7 +70,9 @@
                             <div class="sidebar-item-inner">
                                 <h3 class="sidebar-item-title">Product Information</h3>
                                 <ul class="sidebar-product-info">
-                                    <li>Released On:<span> 1 January, 2016</span></li>
+                                    {{-- <li>Author :<span>{{$user_name}}</span></li> --}}
+                                    <li>Released On:<span>{{$templet->templet_creating_time}}</span></li>
+                                    <li>last Update:<span>{{$templet->updated_at}}</span></li>
 
 
                                 </ul>

@@ -58,116 +58,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla html_css">
-                    <div class="single-item-grid">
-                        <div class="item-img"><img src="img/product/3.jpg" alt="product" class="img-responsive">
-                        </div>
-                        <div class="item-content">
-                            <div class="item-info">
-                                <h3><a href="#">Team Component Pro</a></h3> <span>Joomla Component</span>
-                                <div class="price">free</div>
-                            </div>
-                            <div class="item-profile">
-                                <div class="profile-title">
-                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
-                                                                  class="img-responsive img-circle"></div>
-                                    <span>PsdBosS</span></div>
-                                <div class="profile-rating">
 
+                @foreach($templets as $templet)
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla plugins wordpress">
+                        <div class="single-item-grid">
+                            <div class="item-img"
+                                 style="background-image: url('{{Storage::url($templet->templet_img)}}') ">
+                                <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt"
+                                                                                   aria-hidden="true"></i></div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-info">
+                                    <h3><a href="/{{$templet->id}}">{{$templet->templet_name}}</a></h3>
+                                    <span>catagury</span>
+                                    {{-- <span>{{$catagury}}</span> --}}
+                                    <div class="price">free</div>
+                                </div>
+                                <div class="item-profile">
+                                    <div class="profile-title">
+                                        <div class="img-wrapper">
+                                            <img src="img/profile/1.jpg" alt="profile"
+                                                 class="img-responsive img-circle"></div>
+                                                 <span>user name</span>
+                                                 {{-- <span>{{$user_name}}</span> --}}
+                                    </div>
+                                    <div class="profile-rating">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla plugins wordpress">
-                    <div class="single-item-grid">
-                        <div class="item-img"><img src="img/product/4.jpg" alt="product" class="img-responsive">
-                            <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt"
-                                                                               aria-hidden="true"></i></div>
-                        </div>
-                        <div class="item-content">
-                            <div class="item-info">
-                                <h3><a href="#">Team Component Pro</a></h3> <span>Joomla Component</span>
-                                <div class="price">free</div>
-                            </div>
-                            <div class="item-profile">
-                                <div class="profile-title">
-                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
-                                                                  class="img-responsive img-circle"></div>
-                                    <span>PsdBosS</span></div>
-                                <div class="profile-rating">
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla html_css">
-                    <div class="single-item-grid">
-                        <div class="item-img"><img src="img/product/3.jpg" alt="product" class="img-responsive">
-                        </div>
-                        <div class="item-content">
-                            <div class="item-info">
-                                <h3><a href="#">Team Component Pro</a></h3> <span>Joomla Component</span>
-                                <div class="price">free</div>
-                            </div>
-                            <div class="item-profile">
-                                <div class="profile-title">
-                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
-                                                                  class="img-responsive img-circle"></div>
-                                    <span>PsdBosS</span></div>
-                                <div class="profile-rating">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla plugins wordpress">
-                    <div class="single-item-grid">
-                        <div class="item-img"><img src="img/product/4.jpg" alt="product" class="img-responsive">
-                            <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt"
-                                                                               aria-hidden="true"></i></div>
-                        </div>
-                        <div class="item-content">
-                            <div class="item-info">
-                                <h3><a href="#">Team Component Pro</a></h3> <span>Joomla Component</span>
-                                <div class="price">free</div>
-                            </div>
-                            <div class="item-profile">
-                                <div class="profile-title">
-                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
-                                                                  class="img-responsive img-circle"></div>
-                                    <span>PsdBosS</span></div>
-                                <div class="profile-rating">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 joomla html_css">
-                    <div class="single-item-grid">
-                        <div class="item-img"><img src="img/product/3.jpg" alt="product" class="img-responsive">
-                        </div>
-                        <div class="item-content">
-                            <div class="item-info">
-                                <h3><a href="#">Team Component Pro</a></h3> <span>Joomla Component</span>
-                                <div class="price">free</div>
-                            </div>
-                            <div class="item-profile">
-                                <div class="profile-title">
-                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
-                                                                  class="img-responsive img-circle"></div>
-                                    <span>PsdBosS</span></div>
-                                <div class="profile-rating">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
 
             </div>
 

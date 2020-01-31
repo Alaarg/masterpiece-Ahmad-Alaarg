@@ -8256,3 +8256,9 @@ nav#desktop-nav li.has-child-menu:hover ul.thired-level {
 .sidebar-author-info .sidebar-author-content h3{
 margin: 0;
 }
+.item-img {
+    height: 210px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

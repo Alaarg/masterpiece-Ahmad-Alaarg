@@ -25,75 +25,85 @@
         </div>
     </div>
     <!-- Inner Page Banner Area End Here -->
-            <!-- Product Page Grid Start Here -->
+    <!-- Product Page Grid Start Here -->
 
-            <div class="category-product-list bg-secondary section-space-bottom">
-                <div class="container">
-                    <div class="inner-page-main-body">
-                            <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane fade in active clear products-container" id="gried-view">
-                                <div class="product-grid-view padding-narrow">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                            <div class="single-item-grid">
-                                                <div class="item-img">
-                                                    <img src="img/product/43.jpg" alt="product" class="img-responsive">
-                                                    <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i></div>
-                                                </div>
-                                                <div class="item-content">
-                                                    <div class="item-info">
-                                                        <h3><a href="#">Team Component Pro</a></h3>
-                                                        <span>Joomla Component</span>
-                                                        <div class="price">free</div>
+    <div class="category-product-list bg-secondary section-space-bottom">
+        <div class="container">
+            <div class="inner-page-main-body">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active clear products-container" id="gried-view">
+                        <div class="product-grid-view padding-narrow">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <div class="single-item-grid">
+                                        <div class="item-img">
+                                            <img src="img/product/43.jpg" alt="product" class="img-responsive">
+                                            <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt"
+                                                                                               aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-info">
+                                                <h3><a href="#">Team Component Pro</a></h3>
+                                                <span>Joomla Component</span>
+                                                <div class="price">free</div>
+                                            </div>
+                                            <div class="item-profile">
+                                                <div class="profile-title">
+                                                    <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile"
+                                                                                  class="img-responsive img-circle">
                                                     </div>
-                                                    <div class="item-profile">
-                                                        <div class="profile-title">
-                                                            <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile" class="img-responsive img-circle"></div>
-                                                            <span>PsdBosS</span>
+                                                    <span>PsdBosS</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @foreach($templets as $templet)
+                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                        <div class="single-item-grid">
+                                            <div class="item-img">
+                                                <img src="{{Storage::url($templet->templet_img)}}" alt="product"
+                                                     class="img-responsive">
+                                                <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt"
+                                                                                                   aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="item-content">
+                                                <div class="item-info">
+                                                    <h3><a href="#">{{$templet->templet_name}}</a></h3>
+                                                    <span>{{$templet->category_id}}</span>
+                                                    <div class="price">free</div>
+                                                </div>
+                                                <div class="item-profile">
+                                                    <div class="profile-title">
+                                                        <div class="img-wrapper"><img src="img/profile/1.jpg"
+                                                                                      alt="profile"
+                                                                                      class="img-responsive img-circle">
                                                         </div>
+                                                        <span>{{$templet->user_id}}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        @foreach($templets as $templet)
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="single-item-grid">
-                                                    <div class="item-img">
-                                                        <img src="img/product/43.jpg" alt="product" class="img-responsive">
-                                                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i></div>
-                                                    </div>
-                                                    <div class="item-content">
-                                                        <div class="item-info">
-                                                            <h3><a href="#">{{$templet->templet_name}}</a></h3>
-                                                            <span>{{$templet->category_id}}</span>
-                                                            <div class="price">free</div>
-                                                        </div>
-                                                        <div class="item-profile">
-                                                            <div class="profile-title">
-                                                                <div class="img-wrapper"><img src="img/profile/1.jpg" alt="profile" class="img-responsive img-circle"></div>
-                                                                <span>{{$user_id}}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    </div>
 
-                                        @endforeach
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <ul class="pagination-align-center">
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <ul class="pagination-align-center">
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Product Page Grid End Here -->
-           @endsection
+        </div>
+    </div>
+    <!-- Product Page Grid End Here -->
+@endsection
